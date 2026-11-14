@@ -18,10 +18,10 @@
 
 ## 怎么做
 
-1. **定义约束：**每位医生恰好分配一次；各医院实际接收人数不能超过容量。输入检查排除偏好重复、未知医院、负容量和总容量不足。
-2. **构造代价：**偏好第 1 名的代价为 1，第 2 名为 2，依此类推。将医院容量展开成独立槽位，形成“医生 × 槽位”成本矩阵。
-3. **求解与比较：**使用 Hungarian 算法最小化总代价；以随机医生顺序的贪心分配作为对照，固定 `seed=10`，重复 1,000 次。
-4. **解释结果：**同时报告总代价、平均匹配排名、第一志愿比例、前三志愿比例和最差排名，避免只看一个平均数。
+1. **定义约束**：每位医生恰好分配一次；各医院实际接收人数不能超过容量。输入检查排除偏好重复、未知医院、负容量和总容量不足。
+2. **构造代价**：偏好第 1 名的代价为 1，第 2 名为 2，依此类推。将医院容量展开成独立槽位，形成“医生 × 槽位”成本矩阵。
+3. **求解与比较**：使用 Hungarian 算法最小化总代价；以随机医生顺序的贪心分配作为对照，固定 `seed=10`，重复 1,000 次。
+4. **解释结果**：同时报告总代价、平均匹配排名、第一志愿比例、前三志愿比例和最差排名，避免只看一个平均数。
 
 ## 结果如何
 
@@ -56,3 +56,4 @@ python projects/doctor-hospital-matching/assignment.py
 - 当前假设每位医生对所有医院都有严格完整排序，且总容量足够。真实资格约束、拒绝匹配、地区要求等尚未加入。
 
 **English summary.** A reproducible synthetic allocation example turns hospital capacities into assignment slots and minimizes total doctor preference rank. The optimal cost is 30, versus a mean of 37.699 across 1,000 randomized greedy trials. This is a one-sided optimization model, not a two-sided stable matching system or an operational hiring tool.
+
