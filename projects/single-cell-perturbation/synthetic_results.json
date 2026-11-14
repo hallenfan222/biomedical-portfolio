@@ -1,0 +1,14 @@
+{
+  "data": "SYNTHETIC ONLY; not biological or competition performance",
+  "seed": 42,
+  "train_pairs": 39,
+  "validation_pairs": 9,
+  "gene_targets": 24,
+  "MRRMSE": {
+    "Zero": 0.761659,
+    "Gene mean": 0.731231,
+    "Ridge": 0.075159,
+    "PCA + Ridge": 0.179807,
+    "MRRMSE + L2": 0.069785
+  }
+}
